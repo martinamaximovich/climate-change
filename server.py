@@ -1,14 +1,4 @@
 
-"""
-Columbia's COMS W4111.001 Introduction to Databases
-Example Webserver
-To run locally:
-    python3 server.py
-Go to http://localhost:8111 in your browser.
-@author Martina Maximovich, mm5775
-@author Nadiia Dubchak, nd2631
-@version 1.0
-"""
 import os
 from datetime import date
 from decimal import Decimal
