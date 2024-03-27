@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Quiz Results
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #a2eaba;
+			font-family: monospace;
+			text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+        td {
+            width: 150px;
+            text-align: center;
+            border: 1px solid black;
+            padding: 5px;
+        } 
+
+
+	</style>
+</head>
+
+<body>
+<h1>Now let's see how accurate your guesses were!</h1>
+Here, you can view the actual temperature statistics for your hometown. Please 
+note that if there was no data available for your city, we compared your 
+guesses to the closest city that we do have data for. Below, you can also view 
+the responses of other users living in or near your hometown.<br></h2>
+</body>
+<br><br>
+<p><h2>Actual statistics</h2></p>
+<table>
+  <thead>
+    <tr>
+        <th>Average Temperature</th>
+        <th>Minimum Temperature Average</th>
+        <th>Maximum Temperature Average</th>
+    </tr>
+    </thead>    
+    <tbody>
+     {% for row in city_statistics %}    
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p><h2>Your guesses</h2></p>
+<table>
+  <thead>
+    <tr>
+        <th>Average Temperature</th>
+        <th>Minimum Temperature Average</th>
+        <th>Maximum Temperature Average</th>
+    </tr>
+    </thead>    
+    <tbody>
+     {% for row in user_responses %}    
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p><h2>Guesses made by other users from your hometown</h2></p>
+<table>
+    <thead>
+      <tr>
+          <th>Username</th>
+          <th>Hometown</th>
+          <th>Avg Temp Guess</th>
+          <th>Min Temp Avg Guess</th>
+          <th>Max Temp Avg Guess</th>
+          <th>Submitted On</th>
+          <th>Accuracy</th>
+      </tr>
+      </thead>    
+      <tbody>
+       {% for row in responses %}    
+              <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{row[1]}}</td>
+                  <td>{{row[2]}}</td>
+                  <td>{{row[3]}}</td>
+                  <td>{{row[4]}}</td>
+                  <td>{{row[5]}}</td>
+                  <td>{{row[6]}}</td>
+              </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+
+<!-- Button to go back to user_dashboard -->
+<center><button onclick="location.href='user_dashboard'" name="button" type="button"
+    style="font-family: monospace; height:50px;width:550px;margin: 10px; padding: 5px; background-color: #05c46b; color: aliceblue; border: none;border-radius: 4px;font-size: 18px">Go to dashboard</button></center>
+
+</body>

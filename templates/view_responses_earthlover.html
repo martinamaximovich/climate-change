@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Quiz Results
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #a2eaba;
+			font-family: monospace;
+			text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+        td {
+            width: 150px;
+            text-align: center;
+            border: 1px solid black;
+            padding: 5px;
+        } 
+
+
+	</style>
+</head>
+<br><h2>You are an Earth Lover!</h2><br>
+<b1 align="justify">According to your quiz responses, you truly care about climate change. 
+Your serious outlook on the rising temperatures and your enthusiasm to mitigate and
+adapt are impressive! Below are other users who are Earth Lovers, just like you!
+<br>As you can see, all of you live in different cities across
+the U.S., come from different backgrounds, completed a different educational journey,
+have diverse views. This demonstrates that climate awareness is universal!</b1>
+<br><br>
+<table>
+  <thead>
+    <tr>
+        <th>Username</th>
+        <th>Response 1</th>
+        <th>Response 2</th>
+        <th>Response 3</th>
+        <th>Response 4</th>
+        <th>Response 5</th>
+    </tr>
+    </thead>    
+    <tbody>
+     {% for row in data %}    
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Button to go back to user_dashboard -->
+<center><button onclick="location.href='user_dashboard'" name="button" type="button"
+    style="font-family: monospace; height:50px;width:550px;margin: 10px; padding: 5px; background-color: #05c46b; color: aliceblue; border: none;border-radius: 4px;font-size: 18px">Go to dashboard</button></center>
+
+<br><br>
+</body>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		How has climate change affected your home?
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #a2eaba;
+			font-family: monospace;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 12px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #05c46b;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 24px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<br><h2>Check your knowledge of how<br> climate change has affected your home</h2><br>
+	<b1 align="justify"><b>Temperature</b> is a key metric for tracing the ongoing climate 
+	changes. Here, we're giving you a chance to make your guesses about 3 different 
+	temperature-related metrics that are all very useful in understanding climate change. 
+	<br>First, <b>average min temperature</b> is calculated by summing the daily minimum 
+	temperatures for an individual year and dividing it by the number of days in that year.
+	<b>Average max temperature</b> is calculated in the same way but by using daily maximum 
+	temperatures. As the Earth warms overall, the winter is particularly vulnerable to rising 
+	temperatures. Overall, minimum temperatures have increased at a higher rate than average 
+	maximum temperatures, because much of the observed warming has taken place when and where 
+	it is usually the coldest: during winter, at night, and in the northern latitudes. To 
+	conveniently compare the changes in different areas with a single value, we use annual 
+	average temperature: this value is the average of the mean temperature for each day, 
+	where the daily mean equals to the average of daily maximum and minimum temperature.</b1>
+
+	<!-- Create Form -->
+	<form method="POST" action="/guess">
+
+		<!-- Details -->
+		<!-- Guess for temp_avg -->
+		<div class="form-control">
+			<label for="temp_avg" id="label-temp_avg" required>
+				<b>Your guess for annual average temperature change</b><br>How do you think the average annual temperature in your hometown has changed since the end of the 19th century?
+				<br>Please provid your answer in <b>degrees °F per year</b><br>
+			</label>
+
+			<input type="text"
+				id="temp_avg"
+				name="temp_avg"
+				placeholder="Enter your guess" 
+				/>
+		</div>	    
+
+		<!-- Details -->
+		<!-- Guess for min_temp_avg -->
+		<div class="form-control">
+			<label for="min_temp_avg" id="label-min_temp_avg" required>
+				<b>Your guess for average minimum temperature change per year</b><br>How do you think the average min temperature in your hometown has changed since the end of the 19th century?
+				<br>Please provid your answer in <b>degrees °F per year.</b>
+			</label>
+
+			<!-- Input Type username-->
+			<input type="text"
+				id="min_temp_avg"
+				name="min_temp_avg"
+				placeholder="Enter your guess" 
+				/>
+		</div>	    
+
+		<!-- Details -->
+		<!-- Guess for max_temp_avg -->
+		<div class="form-control">
+			<label for="guess" id="label-max_temp_avg" required>
+				<b>Your guess for average maximum temperature change per year</b><br>How do you think the average max temperature in your hometown has changed since the end of the 19th century?
+				<br>Please provid your answer in <b>degrees °F per year.</b>
+			</label>
+
+			<!-- Input Type username-->
+			<input type="text"
+				id="max_temp_avg"
+				name="max_temp_avg"
+				placeholder="Enter your guess" 
+				/>
+		</div>	    
+		
+		<input type="submit" 
+		value="Submit guesses" 
+		style="font-family: monospace; height:50px; width:500px; padding: 5px; background-color: #05c46b; color: aliceblue; border: none;border-radius: 4px;font-size: 18px">
+	</form>
+
+    <!-- Button to go back to user dashboard -->
+	<center><button onclick="location.href='user_dashboard'" name="button" type="button"
+        style="font-family: monospace; height:50px;width:550px;margin: 10px; padding: 5px; background-color: #05c46b; color: aliceblue; border: none;border-radius: 4px;font-size: 18px">Go to dashboard</button></center>
+<br><br>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		How has climate change affected your home?
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #a2eaba;
+			font-family: monospace;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 12px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #05c46b;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 24px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<br><h2>Answer questions about how <br> climate change has affected your home</h2>
+
+	<!-- Create Form -->
+	<form method="POST" action="/quiz">
+		
+		<div class="form-control">
+			<label for="response1" id="label-response1">
+                <b>Question 1</b><br>You believe ongoing climate change is a global emergency</br>
+			</label>
+			
+			<!-- Dropdown options-->
+			<select name="response1" id="response1">
+                <b>Question 1</b><br>
+				<option disabled selected value> -- select an option -- </option>
+                <option value=1>1 - strongly disagree</option>
+				<option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5 - neutral</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10 - strongly agree</option>
+				</option>
+			</select>
+        </div>
+
+        <div class="form-control">
+			<label for="response2" id="label-response2">
+                <b>Question 2</b><br>You are very concerned about climate change and the state of the Earth</br>
+			</label>
+			
+			<!-- Dropdown options-->
+			<select name="response2" id="response2">
+                <b>Question 2</b><br>
+				<option disabled selected value> -- select an option -- </option>
+                <option value=1>1 - strongly disagree</option>
+				<option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5 - neutral</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10 - strongly agree</option>
+				</option>
+			</select>
+        </div>
+
+        <div class="form-control">
+			<label for="response3" id="label-response3">
+                <b>Question 3</b><br>You make an effort to spread awareness about climate change</br>
+			</label>
+			
+			<!-- Dropdown options-->
+			<select name="response3" id="response3">
+                <b>Question 3</b><br>
+				<option disabled selected value> -- select an option -- </option>
+                <option value=1>1 - strongly disagree</option>
+				<option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5 - neutral</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10 - strongly agree</option>
+				</option>
+			</select>
+        </div>
+
+        <div class="form-control">
+			<label for="response4" id="label-response4">
+                <b>Question 4</b><br>You have learned about the science behind climate change to understand it better</br>
+			</label>
+			
+			<!-- Dropdown options-->
+			<select name="response4" id="response4">
+                <b>Question 4</b><br>
+				<option disabled selected value> -- select an option -- </option>
+                <option value=1>1 - strongly disagree</option>
+				<option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5 - neutral</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10 - strongly agree</option>
+				</option>
+			</select>
+        </div>
+
+        <div class="form-control">
+			<label for="response5" id="label-response5">
+                <b>Question 5</b><br>You believe we must take immediate, concrete actions to help stop global warming</br>
+			</label>
+			
+			<!-- Dropdown options-->
+			<select name="response5" id="response5">
+                <b>Question 5</b><br>
+				<option disabled selected value> -- select an option -- </option>
+                <option value=1>1 - strongly disagree</option>
+				<option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5 - neutral</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10 - strongly agree</option>
+				</option>
+			</select>
+        </div>
+
+		<input type="submit" 
+		value="Get your quiz result" 
+		style="font-family: monospace; height:50px; width:500px; padding: 5px; background-color: #05c46b; color: aliceblue; border: none;border-radius: 4px;font-size: 18px">
+	</form>
+	
+	<!-- Button to go back to user_dashboard -->
+	<center><button onclick="location.href='user_dashboard'" name="button" type="button"
+        style="font-family: monospace; height:50px;width:550px;margin: 10px; padding: 5px; background-color: #05c46b; color: aliceblue; border: none;border-radius: 4px;font-size: 18px">Go to dashboard</button></center>
+
+<br><br>
+</body>
+
+</html>

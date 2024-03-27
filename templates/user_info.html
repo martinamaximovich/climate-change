@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		How has climate change affected your home?
+	</title>
+
+	<style>
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #a2eaba;
+			font-family: monospace;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 12px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #05c46b;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 24px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<br><h2>To finish creating your profile, please respond<br>
+	to the questions below, so that we can customize <br> your dashboard</h2>
+
+	<!-- Create Form -->
+	<form method="POST" action="/user_info">
+
+		<!-- gender -->
+		<div class="form-control">
+			<label for="gender" id="label-gender">
+                <b>Gender</b>
+			</label>
+			
+			<!-- Dropdown options for gender -->
+			<select name="gender" id="gender">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="Woman">Woman</option>
+				<option value="Man">Man</option>
+				<option value="Non-Binary">
+					Non-binary
+				</option>
+				<option value="Other">Other</option>
+			</select>
+		</div>
+
+		<!-- dob -->
+        <div class="form-control">
+            <label for="dob" id="label-dob">
+                <b>Date of birth</b>
+            </label>
+
+            <!-- Date Type-->
+            <input type="date" id="dob" name="dob"
+            value="2022-10-14"
+            min="1900-01-01">
+        </div>
+
+		<!-- race -->
+		<div class="form-control">
+			<label for="race" id="label-race">
+				Race
+			</label>
+			
+			<!-- Dropdown options for race -->
+			<select name="race" id="race">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="White">White</option>
+				<option value="Black">Black</option>
+				<option value="Asian">Asian</option>
+				<option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
+				<option value="American Indian or Alaska Native">American Indian or Alaska Native</option>
+				<option value="Two or More Races">Two or More Races</option>
+				<option value="Other">Other</option>
+			</select>
+		</div>
+
+		<!-- ethnicity -->
+		<div class="form-control">
+			<label for="ethnicity" id="label-ethnicity">
+				<b>Ethnicity</b>
+			</label>
+			
+			<!-- Dropdown options for ethnicity -->
+			<select name="ethnicity" id="ethnicity">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="Hispanic or Latino">Hispanic or Latino</option>
+				<option value="Not Hispanic or Latino">Not Hispanic or Latino</option>
+			</select>
+		</div>
+
+		<!-- education -->
+		<div class="form-control">
+			<label for="education" id="label-education">
+				<b>Education</b>
+			</label>
+			
+			<!-- Dropdown options for education -->
+			<select name="education" id="education">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="Some high school">Some high school</option>
+				<option value="High-school graduate or equivalent">High-school graduate or equivalent</option>
+				<option value="Some college or associate degree">Some college or associate degree</option>
+				<option value="Bachelors degree or higher">Bachelors degree or higher</option>
+			</select>
+		</div>
+
+		<!-- political_views -->
+		<div class="form-control">
+			<label for="political_views" id="label-political_views">
+				<b>Political views</b>
+			</label>
+			
+			<!-- Dropdown options for political_views-->
+			<select name="political_views" id="political_views">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="Very Liberal">Very Liberal</option>
+				<option value="Somewhat liberal">Somewhat liberal</option>
+				<option value="Neither liberal nor conservative">Neither liberal nor conservative</option>
+				<option value="Somewhat conservative">Somewhat conservative</option>
+				<option value="Very conservative">Very conservative</option>
+			</select>
+		</div>
+
+		<!-- hometown -->
+        <div class="form-control">
+			<label for="hometown" id="label-hometown">
+				<b>Hometown</b>
+			</label>
+
+			<!-- Input Type hometown-->
+			<input type="hometown"
+				id="hometown"
+				name="hometown"
+				placeholder="Enter your hometown" />
+		</div>
+
+		<!-- state -->
+		<div class="form-control">
+			<label for="state" id="label-state">
+                <b>State</b>
+			</label>
+			
+			<!-- Dropdown options for state -->
+			<select name="state" id="state">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="AK">AK</option>
+				<option value="AL">AL</option>
+				<option value="AR">AR</option>
+				<option value="AZ">AZ</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DE">DE</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="IA">IA</option>
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="MA">MA</option>
+				<option value="MD">MD</option>
+				<option value="ME">ME</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MO">MO</option>
+				<option value="MS">MS</option>
+				<option value="MT">MT</option>
+				<option value="NC">NC</option>
+				<option value="ND">ND</option>
+				<option value="NE">NE</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>
+				<option value="NV">NV</option>
+				<option value="NY">NY</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TN">TX</option>
+				<option value="UT">UT</option>
+				<option value="VA">VA</option>
+				<option value="VT">VT</option>
+				<option value="WA">WA</option>
+				<option value="WV">WV</option>
+				<option value="WY">WY</option>
+			</select>
+		</div>
+
+		<!-- since -->
+		<div class="form-control">
+			<label for="since" id="label-since">
+                <b>Since when have you been living in your hometown?</b>
+			</label>
+			
+            <!-- Date Type -->
+            <input type="date" id="since" name="since"
+            value="2022-10-14"
+            min="1900-01-01">
+		</div>
+
+		<input type="submit" 
+		value="Submit" 
+		style="font-family: monospace; height:50px; width:500px; padding: 5px; background-color: #05c46b; color: aliceblue; border: none;border-radius: 4px;font-size: 18px">
+	</form>
+
+<br><br>
+</body>
+
+</html>
